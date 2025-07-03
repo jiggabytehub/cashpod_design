@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System Documentation</title>
+    <style>
+        :root {
+            --primary: #4A6CF7;
+            --secondary: #6C757D;
+            --accent: #FF6B6B;
+            --success: #28A745;
+            --danger: #DC3545;
+            --dark: #343A40;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: var(--light);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        .color-swatch {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            border-radius: 8px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Design System Documentation</h1>
+            <p>Admin Panel, Landing Page & Mobile Apps</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="overview">
+            <h2>1. Project Overview</h2>
+            <p>This document outlines the design system, color scheme, typography, and UI/UX guidelines for:</p>
+            <ul>
+                <li><strong>Admin Panel (Dashboard)</strong> – For managing website content, users, and analytics.</li>
+                <li><strong>Landing Page</strong> – Marketing front-end for user acquisition.</li>
+                <li><strong>Mobile Apps (iOS & Android)</strong> – Native applications for end-users.</li>
+            </ul>
+        </section>
+
+        <section id="brand-identity">
+            <h2>2. Brand Identity & Design System</h2>
+            
+            <h3>2.1 Color Scheme</h3>
+            <div>
+                <div class="color-swatch" style="background-color: var(--primary);">Primary<br>#4A6CF7</div>
+                <div class="color-swatch" style="background-color: var(--secondary);">Secondary<br>#6C757D</div>
+                <div class="color-swatch" style="background-color: var(--accent);">Accent<br>#FF6B6B</div>
+                <div class="color-swatch" style="background-color: var(--success);">Success<br>#28A745</div>
+                <div class="color-swatch" style="background-color: var(--danger);">Danger<br>#DC3545</div>
+                <div class="color-swatch" style="background-color: var(--dark); color: white;">Dark<br>#343A40</div>
+                <div class="color-swatch" style="background-color: var(--light); color: #333;">Light<br>#F8F9FA</div>
+                <div class="color-swatch" style="background-color: var(--white); color: #333; border: 1px solid #ddd;">White<br>#FFFFFF</div>
+            </div>
+
+            <h3>2.2 Typography</h3>
+            <table>
+                <tr>
+                    <th>Type</th>
+                    <th>Font Family</th>
+                    <th>Usage</th>
+                    <th>Weight</th>
+                </tr>
+                <tr>
+                    <td>Headings</td>
+                    <td>Inter (Bold)</td>
+                    <td>Titles, section headers</td>
+                    <td>700</td>
+                </tr>
+                <tr>
+                    <td>Subheadings</td>
+                    <td>Inter (SemiBold)</td>
+                    <td>Subtitles, card headers</td>
+                    <td>600</td>
+                </tr>
+                <tr>
+                    <td>Body Text</td>
+                    <td>Inter (Regular)</td>
+                    <td>Paragraphs, descriptions</td>
+                    <td>400</td>
+                </tr>
+                <tr>
+                    <td>Buttons & CTAs</td>
+                    <td>Inter (Medium)</td>
+                    <td>Action buttons, links</td>
+                    <td>500</td>
+                </tr>
+                <tr>
+                    <td>Monospace</td>
+                    <td>Roboto Mono</td>
+                    <td>Code blocks, admin logs</td>
+                    <td>400</td>
+                </tr>
+            </table>
+
+            <h3>2.3 Spacing & Layout</h3>
+            <ul>
+                <li><strong>Desktop</strong>: <code>16px</code> base margin/padding, <code>24px</code> section gaps.</li>
+                <li><strong>Mobile</strong>: <code>12px</code> base margin/padding, <code>20px</code> section gaps.</li>
+                <li><strong>Card Border Radius</strong>: <code>8px</code></li>
+                <li><strong>Button Border Radius</strong>: <code>6px</code></li>
+            </ul>
+        </section>
+
+        <section id="admin-panel">
+            <h2>3. Admin Panel (Dashboard) Design</h2>
+            
+            <h3>3.1 Key Features</h3>
+            <ul>
+                <li><strong>User Management</strong> (CRUD operations)</li>
+                <li><strong>Analytics Dashboard</strong> (Charts, metrics)</li>
+                <li><strong>Content Management</strong> (Posts, media, settings)</li>
+                <li><strong>Notifications & Alerts</strong></li>
+            </ul>
+
+            <h3>3.2 UI Components</h3>
+            <ul>
+                <li><strong>Sidebar Navigation</strong> (Dark theme, <code>#343A40</code>)</li>
+                <li><strong>Data Tables</strong> (Pagination, filters)</li>
+                <li><strong>Modals & Forms</strong> (Consistent spacing, validation)</li>
+                <li><strong>Charts & Graphs</strong> (Using Chart.js, consistent colors)</li>
+            </ul>
+
+            <h3>3.3 Screens</h3>
+            <ol>
+                <li><strong>Login Screen</strong> (Minimalist, centered form)</li>
+                <li><strong>Dashboard Overview</strong> (Stats, quick actions)</li>
+                <li><strong>User Management</strong> (Table with search & filters)</li>
+                <li><strong>Settings Panel</strong> (Tabs for different configurations)</li>
+            </ol>
+        </section>
+
+        <section id="landing-page">
+            <h2>4. Landing Page Design</h2>
+            
+            <h3>4.1 Key Sections</h3>
+            <ol>
+                <li><strong>Hero Section</strong> (Clear CTA, value proposition)</li>
+                <li><strong>Features</strong> (Icons + short descriptions)</li>
+                <li><strong>Testimonials</strong> (User reviews, ratings)</li>
+                <li><strong>Pricing Plans</strong> (Comparison table)</li>
+                <li><strong>FAQ & Contact</strong> (Collapsible sections)</li>
+            </ol>
+
+            <h3>4.2 UI Elements</h3>
+            <ul>
+                <li><strong>Buttons</strong>: 
+                    <a href="#" class="btn btn-primary">Primary</a>
+                    <a href="#" class="btn btn-secondary">Secondary</a>
+                    <a href="#" class="btn btn-accent">Accent</a>
+                </li>
+                <li><strong>Cards</strong>: White background, subtle shadow</li>
+                <li><strong>Animations</strong>: Hover effects, smooth scrolling</li>
+            </ul>
+        </section>
+
+        <section id="mobile-apps">
+            <h2>5. Mobile App Design (iOS & Android)</h2>
+            
+            <h3>5.1 Key Screens</h3>
+            <ul>
+                <li><strong>Splash Screen</strong> (Logo + loading animation)</li>
+                <li><strong>Onboarding</strong> (3-step intro)</li>
+                <li><strong>Home Feed</strong> (Content cards, navigation bar)</li>
+                <li><strong>Profile & Settings</strong> (Edit options, logout)</li>
+            </ul>
+
+            <h3>5.2 Platform-Specific Guidelines</h3>
+            <table>
+                <tr>
+                    <th>Element</th>
+                    <th>iOS (Human Interface)</th>
+                    <th>Android (Material 3)</th>
+                </tr>
+                <tr>
+                    <td>Navigation</td>
+                    <td>Bottom Tabs</td>
+                    <td>Bottom Navigation Bar</td>
+                </tr>
+                <tr>
+                    <td>Buttons</td>
+                    <td>Full-width, rounded</td>
+                    <td>Contained, rounded</td>
+                </tr>
+                <tr>
+                    <td>Icons</td>
+                    <td>SF Symbols</td>
+                    <td>Material Icons</td>
+                </tr>
+                <tr>
+                    <td>Typography</td>
+                    <td>San Francisco</td>
+                    <td>Roboto / Inter</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="accessibility">
+            <h2>6. Responsive & Accessibility Considerations</h2>
+            <ul>
+                <li><strong>Breakpoints</strong>:
+                    <ul>
+                        <li>Mobile: <code>&lt;576px</code></li>
+                        <li>Tablet: <code>576px - 992px</code></li>
+                        <li>Desktop: <code>&gt;992px</code></li>
+                    </ul>
+                </li>
+                <li><strong>Accessibility</strong>:
+                    <ul>
+                        <li>Contrast ratio ≥ 4.5:1 (WCAG compliant)</li>
+                        <li>Alt text for images</li>
+                        <li>Keyboard navigable admin panel</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section id="deliverables">
+            <h2>7. Deliverables & Timeline</h2>
+            <table>
+                <tr>
+                    <th>Task</th>
+                    <th>Deadline</th>
+                    <th>Status</th>
+                </tr>
+                <tr>
+                    <td>Design System Finalized</td>
+                    <td>Day 1</td>
+                    <td>✅</td>
+                </tr>
+                <tr>
+                    <td>Admin Panel UI</td>
+                    <td>Day 7</td>
+                    <td>⏳</td>
+                </tr>
+                <tr>
+                    <td>Landing Page</td>
+                    <td>Day 10</td>
+                    <td>⏳</td>
+                </tr>
+                <tr>
+                    <td>Mobile App UI</td>
+                    <td>Day 14</td>
+                    <td>⏳</td>
+                </tr>
+                <tr>
+                    <td>Final Review</td>
+                    <td>Day 15</td>
+                    <td>⏳</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="tools">
+            <h2>8. Tools & Resources</h2>
+            <ul>
+                <li><strong>Design</strong>: Figma (Shared library)</li>
+                <li><strong>Development</strong>: React (Admin), Next.js (Landing), React Native (Mobile)</li>
+                <li><strong>Version Control</strong>: GitHub (Design + Code)</li>
+            </ul>
+        </section>
+
+        <footer style="text-align: center; margin: 40px 0; color: var(--secondary);">
+            <p>Documentation ensures consistency across all platforms while maintaining brand identity.</p>
+            <p>🚀 Let's build something amazing!</p>
+        </footer>
+    </div>
+</body>
+</html>
