@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Design System Documentation</title>
     <style>
         :root {
-            --primary: #4A6CF7;
-            --secondary: #6C757D;
-            --accent: #FF6B6B;
+            --primary: #1B3C53;
+            --secondary:#D2C1B6;
+            --accent: #456882;
+            --alternate: #F9F3EF;
             --success: #28A745;
             --danger: #DC3545;
             --dark: #343A40;
@@ -127,12 +130,12 @@
             
             <h3>2.1 Color Scheme</h3>
             <div>
-                <div class="color-swatch" style="background-color: var(--primary);">Primary<br>#4A6CF7</div>
-                <div class="color-swatch" style="background-color: var(--secondary);">Secondary<br>#6C757D</div>
-                <div class="color-swatch" style="background-color: var(--accent);">Accent<br>#FF6B6B</div>
-                <div class="color-swatch" style="background-color: var(--success);">Success<br>#28A745</div>
-                <div class="color-swatch" style="background-color: var(--danger);">Danger<br>#DC3545</div>
-                <div class="color-swatch" style="background-color: var(--dark); color: white;">Dark<br>#343A40</div>
+                <div class="color-swatch" style="background-color: var(--primary);">Primary<br><span style="color: #333;">#4A6CF7</span></div>
+                <div class="color-swatch" style="background-color: var(--secondary);">Secondary<br><span style="color: #333;">#6C757D</span></div>
+                <div class="color-swatch" style="background-color: var(--accent);">Accent<br><span style="color: #333;">#FF6B6B</span></div>
+                <div class="color-swatch" style="background-color: var(--success);">Success<br><span style="color: #333;">#28A745</span></div>
+                <div class="color-swatch" style="background-color: var(--danger);">Danger<br><span style="color: #333;">#DC3545</span></div>
+                <div class="color-swatch" style="background-color: var(--dark); color: white;">Dark<br><span style="color: #333;">#343A40</span></div>
                 <div class="color-swatch" style="background-color: var(--light); color: #333;">Light<br>#F8F9FA</div>
                 <div class="color-swatch" style="background-color: var(--white); color: #333; border: 1px solid #ddd;">White<br>#FFFFFF</div>
             </div>
@@ -299,44 +302,8 @@
             </ul>
         </section>
 
-        <section id="deliverables">
-            <h2>7. Deliverables & Timeline</h2>
-            <table>
-                <tr>
-                    <th>Task</th>
-                    <th>Deadline</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Design System Finalized</td>
-                    <td>Day 1</td>
-                    <td>✅</td>
-                </tr>
-                <tr>
-                    <td>Admin Panel UI</td>
-                    <td>Day 7</td>
-                    <td>⏳</td>
-                </tr>
-                <tr>
-                    <td>Landing Page</td>
-                    <td>Day 10</td>
-                    <td>⏳</td>
-                </tr>
-                <tr>
-                    <td>Mobile App UI</td>
-                    <td>Day 14</td>
-                    <td>⏳</td>
-                </tr>
-                <tr>
-                    <td>Final Review</td>
-                    <td>Day 15</td>
-                    <td>⏳</td>
-                </tr>
-            </table>
-        </section>
-
         <section id="tools">
-            <h2>8. Tools & Resources</h2>
+            <h2>7. Tools & Resources</h2>
             <ul>
                 <li><strong>Design</strong>: Figma (Shared library)</li>
                 <li><strong>Development</strong>: React (Admin), Next.js (Landing), React Native (Mobile)</li>
@@ -344,7 +311,7 @@
             </ul>
         </section>
 
-        <footer style="text-align: center; margin: 40px 0; color: var(--secondary);">
+        <footer style="text-align: center; margin: 40px 0; color: var(--accent);">
             <p>Documentation ensures consistency across all platforms while maintaining brand identity.</p>
             <p>🚀 Let's build something amazing!</p>
         </footer>
